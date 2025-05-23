@@ -13,8 +13,8 @@
           v-model.trim="formData.user"
           required
           minlength="2"
-          pattern="[A-Za-z0-9]+"
-          title="请输入字母或数字"
+          pattern="[\u4e00-\u9fa5A-Za-z0-9]+"
+          title="请输入中文、字母或数字"
         >
       </div>
 
@@ -122,8 +122,14 @@ export default {
       this.submitForm()
     },
     submitForm() {
-      // 实际提交逻辑（示例用 console.log）
       console.log('提交数据:', this.formData)
+      // 提交后清空表单（可选）
+      this.formData = {
+        user: '',
+        pwd: '',
+        sex: '',
+        vehicle: []
+      }
       
       // 真实场景使用 axios：
       // axios.post('/api/submit', this.formData)
