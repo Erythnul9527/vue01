@@ -7,19 +7,19 @@
         <span class="brand">音乐空间</span>
       </div>
       <nav class="navbar-center">
-        <a class="nav-link" href="#">
+        <a class="nav-link" @click.prevent="router.push('/hello')">
           <el-icon><House /></el-icon>
           首页
         </a>
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="#" @click.prevent="openHello">
           <el-icon><Headset /></el-icon>
           音乐馆
         </a>
-        <a class="nav-link" href="#">
+        <a class="nav-link" @click.prevent="router.push('/recommend')">
           <el-icon><Star /></el-icon>
           推荐
         </a>
-        <a class="nav-link" href="#">
+        <a class="nav-link" @click.prevent="router.push('/playlist')">
           <el-icon><Document /></el-icon>
           歌单
         </a>
@@ -35,7 +35,7 @@
         <el-button type="text" circle class="icon-btn">
           <el-icon><Bell /></el-icon>
         </el-button>
-        <img class="avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="用户头像" />
+        <img class="avatar" src="/vite.svg" alt="用户头像" />
       </div>
     </header>
 
@@ -79,12 +79,7 @@
         </div>
       </div>
 
-      <!-- 跳转按钮 -->
-      <div class="center-btn">
-        <el-button type="primary" @click="openHello">
-          跳转到HelloWorld页面
-        </el-button>
-      </div>
+     
     </main>
 
     <!-- 页脚 -->
